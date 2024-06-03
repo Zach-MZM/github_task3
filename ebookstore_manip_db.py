@@ -10,6 +10,8 @@ else:
 
 # cursor object to modify database through sql commands
 cursr = db.cursor() 
+
+# creates database table (titled book) if the database directory does not exist
 if not os.path.exists("database"):
     try:
         cursr.execute('''CREATE TABLE book(
